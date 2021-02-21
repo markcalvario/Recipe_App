@@ -1,0 +1,183 @@
+{% extends 'template.html' %}
+{% block head %}
+
+    <style>
+        .banner {
+            /*background-color: #cabbe9;*/
+            background-color: black;
+            height: 45vh;
+            position: relative;
+        }
+
+        .banner h4 {
+            position: absolute;
+            top: 15%;
+            /* letter-spacing: 10px; */
+            color: white;
+            /* font-weight: bold; */
+            left: 0;
+            right: 0;
+            margin: 0 auto;
+            font-size: 3rem;
+            justify-content: center;
+            display: flex;
+        }
+
+        .banner:before {
+            content: ' ';
+            display: block;
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0.5;
+            background-image: url(https://content.thriveglobal.com/wp-content/uploads/2018/10/10eHClD8GsCtUWZ0vc-GWQA.jpeg);
+            background-repeat: no-repeat;
+            background-position: 50% 0;
+            background-size: cover;
+        }
+        .create-form{
+            width: 50%;
+        }
+        .no-resize{
+            resize: none;
+        }
+        
+    </style>
+
+{% endblock %}
+
+
+{% block body %}
+    <div class="container-fluid bg-dark">
+        <div class="row text-white text-center py-4">
+            <div class="col-12">
+                <p class="fs-1">Share your own recipe today!</p>
+            </div>
+        </div>
+        
+        <div class="container py-4 create-form">
+            <form id="create-recipe-form" class="row g-3 justify-content-center pb-4" novalidate>
+                <div class="row bg-light">
+                    <!-- General Information -->
+                    <div class="col-12 text-dark py-2 border-bottom">
+                        <div class='row justify-content-end'>
+                            <div class="col-11 fw-bold">
+                                General Information
+                            </div>
+                            <div class="col-1">
+                                <i id="general-information-arrow" class="fa fa-angle-down fw-bold"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="general-information-form" class="row py-4">
+                        <div class="col-6 py-2">
+                            <input type="text" class="form-control" id="full-name" value="" placeholder="Full name" required>
+                            <div id="full-name-invalid" class="invalid-feedback">You entered an empty name!</div>
+                        </div>
+                        <div class="col-6 py-2">
+                            <input type="text" class="form-control" id="food-title" placeholder="Name of food" required>
+                            <div id="food-title-invalid" class="invalid-feedback">You entered an empty food name!</div>
+                        </div>
+                        <div class="col-6 py-2">
+                            <input type="text" class="form-control" id="serving-size" placeholder="serving-size" required>
+                            <div class="invalid-feedback"></div>
+                        </div>
+                        <div class="col-6 py-2">
+                            <input type="text" class="form-control" id="img-url" placeholder="Image URL" required>
+                            <div class="invalid-feedback">You entered an empty image url link!</div>
+                        </div>
+                        <div class="col-12 pt-2">
+                            <textarea class="form-control no-resize" id="food-description" rows="3" placeholder="Description of food..."></textarea>
+                            <div class="invalid-feedback">You entered an empty description of the food!</div>
+                            <div>
+                                <p><span id="characters-left">100</span> characters left</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Ingredients -->
+                    <div class="col-12 py-2 text-dark border-bottom border-top">
+                        <div class='row justify-content-end'>
+                            <div class="col-11 fw-bold">
+                                Ingredients
+                            </div>
+                            <div class="col-1">
+                                <i id="ingredients-arrow" class="fa fa-angle-down fw-bold"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="ingredients-form" class="row my-2 py-4">
+                        <div class="col-12">
+               
+                            <div class="container-fluid">
+                                <ol id="user-ingredients" class="row text-dark">
+                                    <li class="py-2">
+                                        <div class="row">
+                                            <div class="col-11">
+                                                <input type="text" class="form-control" id="user-ingredients-1" required>
+                                                <div class="invalid-feedback">You entered an empty ingredient!</div>
+                                            </div>
+                                            
+                                        </div>
+                                    </li>
+                                </ol>
+                                <div class="row">
+                                    <div class="col-5 ps-3">
+                                        <button id="add-another-ingredient" class="btn btn-success ms-4" >Add Another Ingredient</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="invalid-feedback"></div>
+                        </div>
+                    </div>
+                    <!-- Directions -->
+                    <div class="col-12 py-2 text-dark border-bottom border-top">
+                        <div class='row justify-content-end'>
+                            <div class="col-11 fw-bold">
+                                Directions
+                            </div>
+                            <div class="col-1">
+                                <i id="directions-arrow" class="fa fa-angle-down fw-bold"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="directions-form" class="row my-2 py-4 ">
+                        <div class="col-12">
+                            <div class="container-fluid">
+                                <ol id="user-directions" class="row text-dark">
+                                    <li class="py-2">
+                                        <div class="row">
+                                            <div class="col-11">
+                                                <input type="text" class="form-control" id="user-directions-1" required>
+                                                <div class="invalid-feedback">You entered an empty direction!</div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ol>
+                                <div class="row">
+                                    <div class="col-5 ps-3">
+                                        <button id="add-another-direction" class="btn btn-success ms-4">Add Another Step</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="invalid-feedback"></div>
+                        </div>
+                    </div>
+                    
+                </div>
+                
+             
+                <div class="row justify-content-center py-4 ">
+                    <button id="share-button" class="btn btn-primary col-6" type="submit">Share</button>
+                </div>
+             
+                
+            </form>
+        </div>
+    </div>   
+    <script src="{{url_for('static', filename = 'create.js')}}"></script>
+    
+  
+{% endblock %}
+

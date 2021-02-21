@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Recipe Website</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    
+    <!-- Fonts Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+    {% block head %}
+
+    {% endblock %}
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .cursor-pointer{
+          cursor: pointer;
+        }
+        .card-img-resize{
+          object-fit: cover;
+          height: 200px;
+        }
+    </style>
+  </head>
+  <body>
+    <!-- JQuery -->
+    <script src="http://code.jquery.com/jquery-3.3.1.min.js"crossorigin="anonymous"></script>
+    <div class="container-fluid bg-dark">
+    
+      <header class="py-2 row">
+        <div class="nav-wrapper">
+          <nav class="navbar navbar-expand-sm  navbar-dark">
+            <a href="#"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon flex-end"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-center" id="navbarTogglerDemo03">
+              <a class="nav-link text-white" href="/">Home</a>
+              <a class="nav-link text-white" href="/search">Search Recipes</a>
+              <a class="nav-link text-white" href="/create">Create Recipe</a>
+            </div>
+          </nav>
+        </div>
+      </header>
+    
+    </div>
+    {% block body %}
+
+    {% endblock %}
+   
+    <!-- JQuery UI -->
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU="crossorigin="anonymous"></script>
+    <link rel="stylesheet"href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <!-- JS File -->
+    <script src="{{url_for('static', filename = 'recipesData.js')}}"></script>
+    <script src="{{url_for('static', filename = 'template.js')}}"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-pQQkAEnwaBkjpqZ8RU1fF1AKtTcHJwFl3pblpTlHXybJjHpMYo79HY3hIi4NKxyj" crossorigin="anonymous"></script>   
+    
+  </body>
+</html>
