@@ -3,10 +3,7 @@ const listOfIngredients = document.getElementById("user-ingredients");
 const addDirectionButton = document.getElementById("add-another-direction");
 const listOfDirections = document.getElementById("user-directions");
 const createRecipeForm = document.getElementById("create-recipe-form");
-
 const shareButton = document.getElementById("share-button");
-
-
 let ingredientId = 2;
 let directionId = 2;
 
@@ -91,27 +88,79 @@ const addDirectionInput = ()=>{
 
 }
 const checkUserInputs = () =>{
+  // const invalidServingSize = document.getElementById("invalid-serving-size");
   const fullNameInput = document.getElementById("full-name");
   const foodTitleInput = document.getElementById("food-title");
   const servingSizeInput = document.getElementById("serving-size");
   const imgUrlInput = document.getElementById("img-url");
   const foodDescriptionInput = document.getElementById("food-description");
 
-  const fullName = document.getElementById("full-name").value;
-  const foodTitle = document.getElementById("food-title").value;
-  const servingSize = document.getElementById("serving-size").value;
-  const imgUrl = document.getElementById("img-url").value;
-  const foodDescription = document.getElementById("food-description").value;
+  const fullName = document.getElementById("full-name").value.trim();
+  const foodTitle = document.getElementById("food-title").value.trim();
+  const servingSize = document.getElementById("serving-size").value.trim();
+  const imgUrl = document.getElementById("img-url").value.trim();
+  const foodDescription = document.getElementById("food-description").value.trim();
   const ingredientsList = listOfIngredients.querySelectorAll(".form-control")
   const directionsList = listOfDirections.querySelectorAll(".form-control");
+
+  let hasSeenFirstError = false;
+
+  if (fullName.length==0){
+    fullNameInput.classList.add("is-invalid");
+    if (!hasSeenFirstError){
+      fullNameInput.focus();
+      hasSeenFirstError = true;
+    }
+  }else{
+    fullNameInput.classList.remove("is-invalid");
+  }
+  if (foodTitle.length==0){
+    foodTitleInput.classList.add("is-invalid");
+    if (!hasSeenFirstError){
+      foodTitleInput.focus();
+      hasSeenFirstError = true;
+    }
+  }else{
+    foodTitleInput.classList.remove("is-invalid");
+  }
+  if (servingSize.length==0){
+    servingSizeInput.classList.add("is-invalid");
+    if (!hasSeenFirstError){
+      servingSizeInput.focus();
+      hasSeenFirstError = true;
+    }
+  }else{
+    servingSizeInput.classList.remove("is-invalid");
+  }
+  if (imgUrl.length==0){
+    imgUrlInput.classList.add("is-invalid");
+    if (!hasSeenFirstError){
+      imgUrlInput.focus();
+      hasSeenFirstError = true;
+    }
+  }else{
+    imgUrlInput.classList.remove("is-invalid");
+  }
+  if (foodDescription.length==0){
+    foodDescriptionInput.classList.add("is-invalid");
+    if (!hasSeenFirstError){
+      foodDescriptionInput.focus();
+      hasSeenFirstError = true;
+    }
+  }else{
+    foodDescriptionInput.classList.remove("is-invalid");
+  }
 
   const ingredients = []
   for (let i = 0; i< ingredientsList.length; i++) {
     let ingredientInput = ingredientsList[i];
-    let ingredient = ingredientInput.value;
-    console.log(ingredientInput)
+    let ingredient = ingredientInput.value.trim();
     if (ingredient.length==0){
       ingredientInput.classList.add("is-invalid");
+      if (!hasSeenFirstError){
+        ingredientInput.focus();
+        hasSeenFirstError = true;
+      }
     }
     else{
       ingredientInput.classList.remove("is-invalid");
@@ -122,9 +171,13 @@ const checkUserInputs = () =>{
   const directions = []
   for (let i = 0; i< directionsList.length; i++) {
     let directionInput = directionsList[i];
-    let direction = directionInput.value;
+    let direction = directionInput.value.trim();
     if (direction.length==0){
       directionInput.classList.add("is-invalid");
+      if (!hasSeenFirstError){
+        directionInput.focus();
+        hasSeenFirstError = true;
+      }
     }
     else{
       directionInput.classList.remove("is-invalid");
@@ -132,35 +185,43 @@ const checkUserInputs = () =>{
     }
   }
 
-  if (fullName.length==0){
-    fullNameInput.classList.add("is-invalid");
-  }else{
-    fullNameInput.classList.remove("is-invalid");
-  }
-  if (foodTitle.length==0){
-    foodTitleInput.classList.add("is-invalid");
-  }else{
-    foodTitleInput.classList.remove("is-invalid");
-  }
-  if (servingSize.length==0){
-    servingSizeInput.classList.add("is-invalid");
-  }else{
-    servingSizeInput.classList.remove("is-invalid");
-  }
-  if (imgUrl.length==0){
-    imgUrlInput.classList.add("is-invalid");
-  }else{
-    imgUrlInput.classList.remove("is-invalid");
-  }
-  if (foodDescription.length==0){
-    foodDescriptionInput.classList.add("is-invalid");
-  }else{
-    foodDescriptionInput.classList.remove("is-invalid");
+  
+
+  const recipeDataToSend = 
+  {
+    "food": `${foodTitle}`,
+    "author": `${fullName}`,
+    "image": encodeURIComponent(`${imgUrl}`),
+    "description": `${foodDescription}`,
+    "servings": `${servingSize}`,
+    "ingredients": `${ingredients}`,
+    "directions": `${directions}`
   }
 
-
-
+  if (!(hasSeenFirstError)){
+    save_recipe(recipeDataToSend);
+  }
   createRecipeForm.reset();
+}
+
+
+const save_recipe = (new_recipe) =>{
+  console.log(new_recipe)
+  $.ajax({
+      type: 'POST',
+      url: `create_recipe`,
+      data: JSON.stringify(new_recipe),
+      dataType: "json",
+      contentType: 'application/json; charset=utf-8',
+      success: function(result){
+      },
+      error: function(request, status, error){
+          console.log('Error');
+          console.log(request);
+          console.log(status);
+          console.log(error);
+      }
+  }) 
 }
 
 addIngredientButton.addEventListener("click", (event)=>{

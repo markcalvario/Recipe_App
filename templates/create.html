@@ -38,10 +38,13 @@
             background-size: cover;
         }
         .create-form{
-            width: 50%;
+            width: 40%;
         }
         .no-resize{
             resize: none;
+        }
+        .cursor-pointer{
+            cursor: pointer;
         }
         
     </style>
@@ -56,7 +59,14 @@
                 <p class="fs-1">Share your own recipe today!</p>
             </div>
         </div>
-        
+        <div class="row">
+            <div class="col-12 justify-content-center text-white">
+                <p class="text-center fw-lighter">
+                    You have successfully shared your recipe. Check out your recipe <a href = "#" class="fw-bold text-success">here</a>
+                </p>
+                
+            </div>
+        </div>
         <div class="container py-4 create-form">
             <form id="create-recipe-form" class="row g-3 justify-content-center pb-4" novalidate>
                 <div class="row bg-light">
@@ -67,7 +77,7 @@
                                 General Information
                             </div>
                             <div class="col-1">
-                                <i id="general-information-arrow" class="fa fa-angle-down fw-bold"></i>
+                                <em id="general-information-arrow" class="fa fa-angle-down fw-bold cursor-pointer"></em>
                             </div>
                         </div>
                     </div>
@@ -81,12 +91,12 @@
                             <div id="food-title-invalid" class="invalid-feedback">You entered an empty food name!</div>
                         </div>
                         <div class="col-6 py-2">
-                            <input type="text" class="form-control" id="serving-size" placeholder="serving-size" required>
-                            <div class="invalid-feedback"></div>
+                            <input type="number" class="form-control" id="serving-size" placeholder="serving-size" min="0" max="100"required>
+                            <div id="invalid-serving-size" class="invalid-feedback">Enter a serving size greater than 0!</div>
                         </div>
                         <div class="col-6 py-2">
                             <input type="text" class="form-control" id="img-url" placeholder="Image URL" required>
-                            <div class="invalid-feedback">You entered an empty image url link!</div>
+                            <div class="invalid-feedback">Please enter a valid image url link!</div>
                         </div>
                         <div class="col-12 pt-2">
                             <textarea class="form-control no-resize" id="food-description" rows="3" placeholder="Description of food..."></textarea>
@@ -103,7 +113,7 @@
                                 Ingredients
                             </div>
                             <div class="col-1">
-                                <i id="ingredients-arrow" class="fa fa-angle-down fw-bold"></i>
+                                <em id="ingredients-arrow" class="fa fa-angle-down fw-bold cursor-pointer"></em>
                             </div>
                         </div>
                     </div>
@@ -123,7 +133,7 @@
                                     </li>
                                 </ol>
                                 <div class="row">
-                                    <div class="col-5 ps-3">
+                                    <div class="col-8 ps-3">
                                         <button id="add-another-ingredient" class="btn btn-success ms-4" >Add Another Ingredient</button>
                                     </div>
                                 </div>
@@ -138,7 +148,7 @@
                                 Directions
                             </div>
                             <div class="col-1">
-                                <i id="directions-arrow" class="fa fa-angle-down fw-bold"></i>
+                                <em id="directions-arrow" class="fa fa-angle-down fw-bold cursor-pointer"></em>
                             </div>
                         </div>
                     </div>
@@ -156,7 +166,7 @@
                                     </li>
                                 </ol>
                                 <div class="row">
-                                    <div class="col-5 ps-3">
+                                    <div class="col-8 ps-3">
                                         <button id="add-another-direction" class="btn btn-success ms-4">Add Another Step</button>
                                     </div>
                                 </div>
