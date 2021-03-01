@@ -82,6 +82,7 @@ def create_recipe():
 @app.route('/view/<id>')
 def view_recipe(id):
     current_recipe = recipes[int(id)]
+    # print(current_recipe)
     return render_template("view.html", recipes = current_recipe)
 
 @app.route('/update_recipe', methods=['GET', 'POST'])
@@ -93,6 +94,45 @@ def update_recipe():
     for r in recipes:
         if r["id"]== recipe_id:
             r["food"] = new_recipe_name
+    return jsonify(recipe)
+
+@app.route('/delete_ingredient', methods=['GET', 'POST'])
+def delete_ingredient():
+    global recipes
+    recipe = request.get_json()
+    recipe_id = recipe["id"]
+    ingredient = recipe["ingredient"]
+
+    current_recipe = None
+    for r in recipes:
+        if (r["id"]== recipe_id):
+            current_recipe = r
+    
+    all_ingredients = current_recipe["ingredients"]
+    for i in all_ingredients:
+        if (i["ingredient"]==ingredient):
+            i["mark_as_deleted"] = True
+    print(recipe)
+    
+    return jsonify(recipe)
+
+@app.route('/undo_delete_ingredient', methods=['GET', 'POST'])
+def undo_delete_ingredient():
+    global recipes
+    recipe = request.get_json()
+    recipe_id = recipe["id"]
+    ingredient = recipe["ingredient"]
+
+    current_recipe = None
+    for r in recipes:
+        if (r["id"]== recipe_id):
+            current_recipe = r
+    
+    all_ingredients = current_recipe["ingredients"]
+    for i in all_ingredients:
+        if (i["ingredient"]==ingredient):
+            i["mark_as_deleted"] = False
+    
     return jsonify(recipe)
 
 if __name__=="__main__":

@@ -4,9 +4,13 @@ const recipeDescription = document.getElementById("recipe-description");
 const recipeBanner = document.getElementById("title-section");
 const edit = document.getElementById("edit");
 
+const servings = document.getElementById("servings");
+const authorSection = document.getElementById("author");
+
 const recipe = current_recipe;
 recipeTitle.innerHTML = `${recipe.food}`
 recipeDescription.innerHTML = `${recipe.description}`
+servings.innerHTML = recipe.servings
 
 const display_edit_form = () =>{
     const form = document.createElement("form");
@@ -61,6 +65,8 @@ const display_edit_form = () =>{
     form.classList.add("w-50");
     form.id = "edit-form";
 
+    authorSection.style.top = "48%";
+    recipeDescription.style.top= "58%";
     recipeBanner.append(form);
     bannerTitle.classList.add("d-none")
     input.focus();
@@ -126,6 +132,13 @@ const display_ingredients = (ingredients) =>{
 
             deleteButton.innerHTML = "X";
             deleteButton.classList.add("cursor-pointer");
+            deleteButton.addEventListener("click",()=>{
+                let ingredient_to_delete = {
+                    "id": recipe.id,
+                    "ingredient": ingredient.ingredient
+                }
+                delete_ingredient(ingredient_to_delete);
+            })
             // deleteButton.classList.add("btn", "rounded-3", "btn-outline-light","px-2", "py-0","btn-dark")
             deleteSection.append(deleteButton);
             deleteSection.classList.add("col-10", "mx-auto");
@@ -198,6 +211,43 @@ const display_ingredients_and_directions = ()=>{
     container.append(display_ingredients(ingredients), display_directions(directions));
     
     
+}
+
+const delete_ingredient = (ingredient)=>{
+    $.ajax({
+        type: 'POST',
+        url: `/delete_ingredient`,
+        data: JSON.stringify(ingredient),
+        dataType: "json",
+        contentType: 'application/json; charset=utf-8',
+        success: function(result){
+            window.location.href = `/view/${recipe.id}`;
+        },
+        error: function(request, status, error){
+            console.log('Error');
+            console.log(request);
+            console.log(status);
+            console.log(error);
+        }
+    }) 
+}
+const undo_delete_ingredient = (ingredient)=>{
+    $.ajax({
+        type: 'POST',
+        url: `/undo_delete_ingredient`,
+        data: JSON.stringify(ingredient),
+        dataType: "json",
+        contentType: 'application/json; charset=utf-8',
+        success: function(result){
+            window.location.href = `/view/${recipe.id}`;
+        },
+        error: function(request, status, error){
+            console.log('Error');
+            console.log(request);
+            console.log(status);
+            console.log(error);
+        }
+    }) 
 }
 
 display_ingredients_and_directions();

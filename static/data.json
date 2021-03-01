@@ -5,7 +5,7 @@
             "food": "Authentic Mexican Birria",
             "author": "Charbel Barker",
             "image": "https://www.mylatinatable.com/wp-content/uploads/2019/11/Birria-3-1536x1157.jpg",
-            "description": "Learn how to make this delicious and popular Mexican Birria recipe.",
+            "description": "Learn how to make this delicious and popular Mexican Birria recipe. Birria is authentic and addicting and will be leaving you asking for more.",
             "servings": 10,
             "ingredients": [
                 {
@@ -117,7 +117,7 @@
             "food": "Gourmet Salmon Dinner",
             "author": "Pierce Abernathy",
             "image": "https://img.buzzfeed.com/thumbnailer-prod-us-east-1/50e8eeb609f340f788ddddf8bc7faaa3/BFV28280EasySalmonDinnervsGourmetSalmonDinnerFBV4.jpg?output-format=webp&output-quality=auto",
-            "description":"a",
+            "description":"Looking for a nice healthy meal? This gourmet salmon recipe is the perfect meal for that that will leave you wanting more!",
             "servings": 2,
             "ingredients": [
                 {
@@ -209,7 +209,7 @@
             "food":"Chicken Tacos Dorados",
             "author": "Anonymous",
             "image": "https://images-gmi-pmc.edge-generalmills.com/81142975-7f6a-46c7-b8d7-6057cb4b9d3d.jpg",
-            "description": "a",
+            "description": "Your family will love this hearty dinner, and you will love how easy and quick it can be prepared. Top these tacos with your favorite greens and spicy salsa!",
             "servings": 12,
             "ingredients": 
             [
@@ -252,7 +252,7 @@
             "food": "Mexican Conchas",
             "author": "Mely Martinez",
             "image": "https://www.mexicoinmykitchen.com/wp-content/uploads/2019/03/Conchas-Recipe-Mexican-pan-dulce-4_4-768x1152.jpg",
-            "description": "a",
+            "description": "Among all the different kinds of traditional Mexican Pan Dulce (“sweet bread”), Conchas are without a doubt the most popular and recognizable. No other pan dulce is more representative of Mexico and its love of bread.",
             "servings": 16,
             "ingredients":
             [
@@ -310,7 +310,7 @@
             "food": "Tacos Al Pastor",
             "author": "Mely Martinez",
             "image": "https://www.mexicoinmykitchen.com/wp-content/uploads/2017/05/Tacosalpastor2.jpg",
-            "description": "a",
+            "description": "Tacos Al Pastor are thinly sliced pieces of marinated pork that make for the best taco. Serve them up with some sliced onion, pineapple, and cilantro and you have yourself a fantastic dinner your family will devour.",
             "servings": 6,
             "ingredients": 
             [
@@ -404,7 +404,7 @@
             "food":"Spicy chicken empanadas",
             "author": "Valli Little",
             "image": "https://img.delicious.com.au/9dCVEY8m/w759-h506-cfill/del/2016/08/easy-chicken-empanadas-35645-2.jpg",
-            "description": "a",
+            "description": "These empanadas are crispy on the outside, soft on the inside and a finger licking spicy chicken filling. This classic Venezuelan street food is great as a lunch snack and if made smaller perfect as canapes for any party.",
             "servings": 20,
             "ingredients":
             [
@@ -511,7 +511,7 @@
             "food": "Chicken Fajitas",
             "author": "Isabel",
             "image": "https://www.isabeleats.com/wp-content/uploads/2019/01/30-minute-chicken-fajitas-small-3.jpg",
-            "description": "a",
+            "description": "Limited on time? Make these healthy and easy Chicken Fajitas in only 30 minutes for a quick and delicious Mexican dinner tonight! Not only are they juicy, flavorful and healthy, but they’re also ready to eat in only 30 minutes!",
             "servings": 8,
             "ingredients":
             [
@@ -602,8 +602,9 @@
             "id": 7,
             "food": "Chocolate Chip Cookies",
             "author": "Laura",
+            "servings": 6,
             "image": "https://joyfoodsunshine.com/wp-content/uploads/2016/01/best-chocolate-chip-cookie-recipe-ever-no-chilling-683x1024.jpg",
-            "description": "a",
+            "description": "This is the best chocolate chip cookie recipe ever! No funny ingredients, no chilling time, etc. Just a simple, straightforward, amazingly delicious, doughy yet still fully cooked, chocolate chip cookie that turns out perfectly every single time! ",
             "ingredients":
             [
                 {
@@ -665,7 +666,7 @@
             "food": "Teriyaki Chicken",
             "author": "Tiffany",
             "image": "https://i2.wp.com/www.downshiftology.com/wp-content/uploads/2020/03/Teriyaki-Chicken-7.jpg",
-            "description": "a",
+            "description": "This recipe makes the best ever baked Teriyaki Chicken! Juicy and tender chicken breasts cooked in the most incredible, super easy homemade teriyaki sauce with simple ingredients. The only baked teriyaki chicken recipe you’ll ever need! ",
             "servings": 4,
             "ingredients": 
             [
@@ -728,7 +729,8 @@
             "food": "Crispy Fried Chicken Tenders",
             "author":"Rachel Ballard",
             "image": "https://feastandfarm.com/wp-content/uploads/friedchicken.jpg.webp",
-            "description": "a",
+            "servings": 4,
+            "description": "Truly crispy fried chicken tenders are a dinnertime staple you’re whole family will love. Get all my tips for making that crispy crust you crave, seasoning like a pro (and shortcuts if you don’t know how), and fry them up like “cast iron skillet” is your middle name.",
             "ingredients":
             [
                 {
