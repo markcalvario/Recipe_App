@@ -74,7 +74,7 @@ def create_recipe():
 
     recipes.append(new_recipe)
     recent_recipes = recipes[latest:]
-
+    print(new_recipe)
     return jsonify(recipes = recipes)
 
 

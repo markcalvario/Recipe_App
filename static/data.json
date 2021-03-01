@@ -8,29 +8,98 @@
             "description": "Learn how to make this delicious and popular Mexican Birria recipe.",
             "servings": 10,
             "ingredients": [
-                "1 Lb Bone-In Lamb Ribs",
-                "1 Lb Beef shank",
-                "1 Lb Beef loin",
-                "1 1/2 Tbsp Salt",
-                "1 Tbsp Pepper",
-                "1 Tsp Ground Cumin",
-                "4 Dried Guajillo Chiles",
-                "1 Chipotle Pepper",
-                "8 Peppercorns",
-                "2 cloves",
-                "1 Tsp dried thyme",
-                "1 Tsp Marjoram",
-                "1 Tsp Dried Oregano",
-                "2 Bay Leaves",
-                "1/2 Tsp Ground Cumin",
-                "1/2 Tsp Ground Ginger",
-                "1/2 Cinnamon Stick",
-                "8 Cloves Garlic",
-                "1/2 Large Onion",
-                "1 1/2 Tbsp Salt",
-                "4 Red Tomatoes",
-                "1/4 cup Apple cider vinegar",
-                "2 cups Water"
+                {
+                    "ingredient": "1 Lb Bone-In Lamb Ribs",
+                    "mark_as_deleted": false
+                },
+                {
+                    "ingredient": "1 Lb Beef shank",
+                    "mark_as_deleted": false
+                },
+                {
+                    "ingredient": "1 Lb Beef loin",
+                    "mark_as_deleted": false
+                },
+                {
+                    "ingredient": "1 1/2 Tbsp Salt",
+                    "mark_as_deleted": false
+                },
+                {
+                    "ingredient": "1 Tbsp Pepper",
+                    "mark_as_deleted": false
+                },
+                {
+                    "ingredient": "1 Tsp Ground Cumin",
+                    "mark_as_deleted": false
+                },
+                {
+                    "ingredient": "4 Dried Guajillo Chiles",
+                    "mark_as_deleted": false
+                },
+                {
+                    "ingredient": "1 Chipotle Pepper",
+                    "mark_as_deleted": false
+                },
+                {
+                    "ingredient": "8 Peppercorns",
+                    "mark_as_deleted": false
+                },
+                {
+                    "ingredient": "2 cloves",
+                    "mark_as_deleted": false
+                },
+                {
+                    "ingredient": "1 Tsp dried thyme",
+                    "mark_as_deleted": false
+                },
+                {
+                    "ingredient": "1 Tsp Marjoram",
+                    "mark_as_deleted": false
+                },
+                {
+                    "ingredient": "1 Tsp Dried Oregano",
+                    "mark_as_deleted": false
+                },
+                {
+                    "ingredient": "2 Bay Leaves",
+                    "mark_as_deleted": false
+                },
+                {
+                    "ingredient": "1/2 Tsp Ground Cumin",
+                    "mark_as_deleted": false
+                },
+                {
+                    "ingredient": "1/2 Tsp Ground Ginger",
+                    "mark_as_deleted": false
+                },
+                {
+                    "ingredient": "1/2 Cinnamon Stick",
+                    "mark_as_deleted": false
+                },
+                {
+                    "ingredient": "8 Cloves Garlic",
+                    "mark_as_deleted": false
+                },
+                {
+                    "ingredient": "1/2 Large Onion",
+                    "mark_as_deleted": false
+                },
+                {
+                    "ingredient": "1 1/2 Tbsp Salt",
+                    "mark_as_deleted": false
+                },
+                {
+                    "ingredient": "4 Red Tomatoes",
+                    "mark_as_deleted": false
+                },
+                {
+                    "ingredient": "1/4 cup Apple cider vinegar",
+                    "mark_as_deleted": false
+                },
+                {
+                    "ingredient": "2 cups Water",
+                    "mark_as_deleted": false
+                }
             ],
             "directions": [
                 "Season the meat with salt, pepper, and cumin",
@@ -52,38 +121,72 @@
             "servings": 2,
             "ingredients": [
                 {
-                    "Creamy Shallot Potato Puree": 
-                    [
-                        "4 tablespoons butter, divided",
-                        "2 shallots, thinly sliced",
-                        "2 cloves garlic, minced",
-                        "½ cup whole milk",
-                        "1 ½ teaspoons white pepper",
-                        "1 teaspoon salt",
-                        "2 lb yellow potato, peeled, quartered, and boiled until tender"
-                    ]
+                    "ingredient": "4 tablespoons butter, divided",
+                    "mark_as_deleted": false
                 },
                 {
-                    "Sauteed Vegetables": 
-                    [
-                        "olive oil, to taste",
-                        "1 cup porcini mushroom, trimmed and quartered",
-                        "1 bunch asparagus, ends trimmed",
-                        "salt, to taste",
-                        "pepper, to taste"
-                    ]
+                    "ingredient": "2 shallots, thinly sliced",
+                    "mark_as_deleted": false
                 },
                 {
-                    "CRISPY SKIN HERB-CRUSTED SALMON":
-                    [
-                        "2 skin-on salmon fillets",
-                        "salt, to taste",
-                        "pepper, to taste",
-                        "fresh thyme, to taste",
-                        "olive oil, to taste",
-                        "2 tablespoons butter, cubed",
-                        "3 cloves garlic, crushed"
-                    ]
+                    "ingredient": "2 cloves garlic, minced",
+                    "mark_as_deleted": false
+                },
+                {
+                    "ingredient": "½ cup whole milk",
+                    "mark_as_deleted": false
+                },
+                {
+                    "ingredient": "1 ½ teaspoons white pepper",
+                    "mark_as_deleted": false
+                },
+                {
+                    "ingredient":  "1 teaspoon salt",
+                    "mark_as_deleted": false
+                },
+                {
+                    "ingredient": "2 lb yellow potato, peeled, quartered, and boiled until tender",
+                    "mark_as_deleted": false
+                },
+                {
+                    "ingredient": "olive oil, to taste",
+                    "mark_as_deleted": false
+                },
+                {
+                    "ingredient": "1 cup porcini mushroom, trimmed and quartered",
+                    "mark_as_deleted": false
+                },
+                {
+                    "ingredient": "1 bunch asparagus, ends trimmed",
+                    "mark_as_deleted": false
+                },
+                {
+                    "ingredient": "salt, to taste",
+                    "mark_as_deleted": false
+                },
+                {
+                    "ingredient": "pepper, to taste",
+                    "mark_as_deleted": false
+                },
+                {
+                    "ingredient": "2 skin-on salmon fillets",
+                    "mark_as_deleted": false
+                },
+                {
+                    "ingredient":  "salt, to taste",
+                    "mark_as_deleted": false
+                },
+                {
+                    "ingredient": "fresh thyme, to taste",
+                    "mark_as_deleted": false
+                },
+                {
+                    "ingredient": "2 tablespoons butter, cubed",
+                    "mark_as_deleted": false
+                },
+                {
+                    "ingredient": "3 cloves garlic, crushed",
+                    "mark_as_deleted": false
                 }
             ],
             "directions": 
@@ -110,12 +213,30 @@
             "servings": 12,
             "ingredients": 
             [
-                "1/2 cup olive oil",
-                "12 corn tortillas",
-                "1 rotisserie chicken, shredded",
-                "2 cups lettuce, shredded",
-                "2 Roma tomatoes, sliced",
-                "1 cup crumbled Cotija cheese"
+                {
+                    "ingredient": "1/2 cup olive oil",
+                    "mark_as_deleted": false
+                },
+                {
+                    "ingredient": "12 corn tortillas",
+                    "mark_as_deleted": false
+                },
+                {
+                    "ingredient": "1 rotisserie chicken, shredded",
+                    "mark_as_deleted": false
+                },
+                {
+                    "ingredient": "2 cups lettuce, shredded",
+                    "mark_as_deleted": false
+                },
+                {
+                    "ingredient": "2 Roma tomatoes, sliced",
+                    "mark_as_deleted": false
+                },
+                {
+                    "ingredient": "1 cup crumbled Cotija cheese",
+                    "mark_as_deleted": false
+                }
             ],
             "directions":
             [
@@ -135,14 +256,38 @@
             "servings": 16,
             "ingredients":
             [
-                "500 grams All-Purpose Flour plus extra for dusting",
-                "125 grams Sugar",
-                "7.5 grams Active Dry Yeast",
-                "3 grams Salt",
-                "100 grams Non-Salted Butter at room temperature",
-                "100 ml eggs (use a measuring cup, it equals about 6-½ Tbps)",
-                "5 ml Vanilla extract*",
-                "120 ml of Milk warm"
+                {
+                    "ingredient": "500 grams All-Purpose Flour plus extra for dusting",
+                    "mark_as_deleted": false
+                },
+                {
+                    "ingredient": "125 grams Sugar",
+                    "mark_as_deleted": false
+                },
+                {
+                    "ingredient": "7.5 grams Active Dry Yeast",
+                    "mark_as_deleted": false
+                },
+                {
+                    "ingredient": "3 grams Salt",
+                    "mark_as_deleted": false
+                },
+                {
+                    "ingredient": "100 grams Non-Salted Butter at room temperature",
+                    "mark_as_deleted": false
+                },
+                {
+                    "ingredient": "100 ml eggs (use a measuring cup, it equals about 6-½ Tbps)",
+                    "mark_as_deleted": false
+                },
+                {
+                    "ingredient": "5 ml Vanilla extract*",
+                    "mark_as_deleted": false
+                },
+                {
+                    "ingredient": "120 ml of Milk warm",
+                    "mark_as_deleted": false
+                }
             ],
             "directions": 
             [
@@ -169,24 +314,78 @@
             "servings": 6,
             "ingredients": 
             [
-                "1 oz. guajillo peppers cleaned and seed removed About 4 peppers",
-                "1 oz. achiote paste",
-                "¼ cup pineapple juice you could use the juices from the sliced pineapple can",
-                "¼ cup white vinegar",
-                "3 garlic cloves",
-                "1 tsp. Mexican oregano",
-                "½ tsp. ground cumin",
-                "¼ tsp. ground black pepper",
-                "2 cloves",
-                "1 ¼ tsp. salt",
-                "2 Lbs. pork butt Shoulder cut in ⅓ inch steaks",
-                "Salt and pepper to season the meat",
-                "1 medium size white onion cut in slices",
-                "1 can of pineapple rings",
-                "1 medium size bunch of cilantro washed and finely chopped",
-                "1 medium size onion finely chopped",
-                "12 Corn tortillas",
-                "A good spicy salsa of your choice"
+                {
+                    "ingredient": "1 oz. guajillo peppers cleaned and seed removed About 4 peppers",
+                    "mark_as_deleted": false
+                },
+                {
+                    "ingredient": "1 oz. achiote paste",
+                    "mark_as_deleted": false
+                },
+                {
+                    "ingredient": "¼ cup pineapple juice you could use the juices from the sliced pineapple can",
+                    "mark_as_deleted": false
+                },
+                {
+                    "ingredient": "¼ cup white vinegar",
+                    "mark_as_deleted": false
+                },
+                {
+                    "ingredient": "3 garlic cloves",
+                    "mark_as_deleted": false
+                },
+                {
+                    "ingredient": "1 tsp. Mexican oregano",
+                    "mark_as_deleted": false
+                },
+                {
+                    "ingredient": "½ tsp. ground cumin",
+                    "mark_as_deleted": false
+                },
+                {
+                    "ingredient": "¼ tsp. ground black pepper",
+                    "mark_as_deleted": false
+                },
+                {
+                    "ingredient": "2 cloves",
+                    "mark_as_deleted": false
+                },
+                {
+                    "ingredient":   "1 ¼ tsp. salt",
+                    "mark_as_deleted": false
+                },
+                {
+                    "ingredient":  "2 Lbs. pork butt Shoulder cut in ⅓ inch steaks",
+                    "mark_as_deleted": false
+                },
+                {
+                    "ingredient": "Salt and pepper to season the meat",
+                    "mark_as_deleted": false
+                },
+                {
+                    "ingredient": "1 medium size white onion cut in slices",
+                    "mark_as_deleted": false
+                },
+                {
+                    "ingredient": "1 can of pineapple rings",
+                    "mark_as_deleted": false
+                },
+                {
+                    "ingredient": "1 medium size bunch of cilantro washed and finely chopped",
+                    "mark_as_deleted": false
+                },
+                {
+                    "ingredient": "1 medium size onion finely chopped",
+                    "mark_as_deleted": false
+                },
+                {
+                    "ingredient": "12 Corn tortillas",
+                    "mark_as_deleted": false
+                },
+                {
+                    "ingredient": "A good spicy salsa of your choice",
+                    "mark_as_deleted": false
+                }
             ],
             "directions":
             [
@@ -209,27 +408,90 @@
             "servings": 20,
             "ingredients":
             [
-                "1 tbs olive oil",
-                "1 chorizo, finely chopped",
-                "1 onion, finely chopped",
-                "2 garlic cloves, finely chopped",
-                "350g chicken mince",
-                "1 tsp ground cumin",
-                "2 tsp smoked sweet paprika (pimenton)",
-                "1/2 cup (75g) sundried tomatoes, blended to a paste",
-                "2 tbs Massel Chicken Style Liquid Stock",
-                "1/2 bunch coriander, leaves chopped",
-                "Red and green hot sauces, to serve",
-                "5 cups (750g) plain flour, sifted",
-                "200g lard, softened",
-                "2 eggs, plus 1 extra lightly beaten egg to brush",
-                "1/4 cup (60ml) olive oil",
-                "2 long green chillies, finely chopped",
-                "2 spring onions, finely chopped",
-                "2 garlic cloves, finely chopped",
-                "2 tomatoes, seeds removed, chopped",
-                "Juice of 1 lime, plus wedges to serve",
-                "1/2 bunch coriander, leaves chopped"
+                {
+                    "ingredient": "1 tbs olive oil",
+                    "mark_as_deleted": false
+                },
+                {
+                    "ingredient": "1 chorizo, finely chopped",
+                    "mark_as_deleted": false
+                },
+                {
+                    "ingredient": "1 onion, finely chopped",
+                    "mark_as_deleted": false
+                },
+                {
+                    "ingredient": "2 garlic cloves, finely chopped",
+                    "mark_as_deleted": false
+                },
+                {
+                    "ingredient": "350g chicken mince",
+                    "mark_as_deleted": false
+                },
+                {
+                    "ingredient": "1 tsp ground cumin",
+                    "mark_as_deleted": false
+                },
+                {
+                    "ingredient": "2 tsp smoked sweet paprika (pimenton)",
+                    "mark_as_deleted": false
+                },
+                {
+                    "ingredient": "1/2 cup (75g) sundried tomatoes, blended to a paste",
+                    "mark_as_deleted": false
+                },
+                {
+                    "ingredient": "2 tbs Massel Chicken Style Liquid Stock",
+                    "mark_as_deleted": false
+                },
+                {
+                    "ingredient": "1/2 bunch coriander, leaves chopped",
+                    "mark_as_deleted": false
+                },
+                {
+                    "ingredient": "Red and green hot sauces, to serve",
+                    "mark_as_deleted": false
+                },
+                {
+                    "ingredient": "5 cups (750g) plain flour, sifted",
+                    "mark_as_deleted": false
+                },
+                {
+                    "ingredient": "200g lard, softened",
+                    "mark_as_deleted": false
+                },
+                {
+                    "ingredient": "2 eggs, plus 1 extra lightly beaten egg to brush",
+                    "mark_as_deleted": false
+                },
+                {
+                    "ingredient": "1/4 cup (60ml) olive oil",
+                    "mark_as_deleted": false
+                },
+                {
+                    "ingredient": "2 long green chillies, finely chopped",
+                    "mark_as_deleted": false
+                },
+                {
+                    "ingredient": "2 spring onions, finely chopped",
+                    "mark_as_deleted": false
+                },
+                {
+                    "ingredient": "2 garlic cloves, finely chopped",
+                    "mark_as_deleted": false
+                },
+                {
+                    "ingredient": "2 tomatoes, seeds removed, chopped",
+                    "mark_as_deleted": false
+                },
+                {
+                    "ingredient": "Juice of 1 lime, plus wedges to serve",
+                    "mark_as_deleted": false
+                },
+                {
+                    "ingredient": "1/2 bunch coriander, leaves chopped",
+                    "mark_as_deleted": false
+                }
             ],
             "directions":
             [
@@ -253,23 +515,78 @@
             "servings": 8,
             "ingredients":
             [
-                "2 pounds boneless skinless chicken breast, sliced into thin strips",
-                "1/4 cup chopped cilantro",
-                "2 tablespoons lime juice (juice of 1 lime)",
-                "1 tablespoon cooking oil",
-                "1 tablespoon minced garlic (about 3 cloves)",
-                "1 tablespoon chili powder",
-                "1 teaspoon ground cumin",
-                "1 teaspoon dried oregano",
-                "1/2 teaspoon coarse kosher salt",
-                "1/2 teaspoon paprika",
-                "1/2 teaspoon ancho chili powder",
-                "2 tablespoons cooking oil, divided",
-                "2 bell peppers, sliced into strips",
-                "1 large poblano pepper sliced into strips (or substitute with another bell pepper if you can't find poblanos)",
-                "1/2 large onion, sliced",
-                "1 pinch salt",
-                "guacamole, sour cream, chopped cilantro, flour or corn tortillas"
+                {
+                    "ingredient": "2 pounds boneless skinless chicken breast, sliced into thin strips",
+                    "mark_as_deleted": false
+                },
+                {
+                    "ingredient": "1/4 cup chopped cilantro",
+                    "mark_as_deleted": false
+                },
+                {
+                    "ingredient": "2 tablespoons lime juice (juice of 1 lime)",
+                    "mark_as_deleted": false
+                },
+                {
+                    "ingredient": "1 tablespoon cooking oil",
+                    "mark_as_deleted": false
+                },
+                {
+                    "ingredient": "1 tablespoon minced garlic (about 3 cloves)",
+                    "mark_as_deleted": false
+                },
+                {
+                    "ingredient": "1 tbs olive oil",
+                    "mark_as_deleted": false
+                },
+                {
+                    "ingredient": "1 tablespoon chili powder",
+                    "mark_as_deleted": false
+                },
+                {
+                    "ingredient": "1 teaspoon ground cumin",
+                    "mark_as_deleted": false
+                },
+                {
+                    "ingredient": "1 teaspoon dried oregano",
+                    "mark_as_deleted": false
+                },
+                {
+                    "ingredient": "1/2 teaspoon coarse kosher salt",
+                    "mark_as_deleted": false
+                },
+                {
+                    "ingredient": "1/2 teaspoon paprika",
+                    "mark_as_deleted": false
+                },
+                {
+                    "ingredient": "1/2 teaspoon ancho chili powder",
+                    "mark_as_deleted": false
+                },
+                {
+                    "ingredient": "2 tablespoons cooking oil, divided",
+                    "mark_as_deleted": false
+                },
+                {
+                    "ingredient": "2 bell peppers, sliced into strips",
+                    "mark_as_deleted": false
+                },
+                {
+                    "ingredient": "1 large poblano pepper sliced into strips (or substitute with another bell pepper if you can't find poblanos)",
+                    "mark_as_deleted": false
+                },
+                {
+                    "ingredient": "1/2 large onion, sliced",
+                    "mark_as_deleted": false
+                },
+                {
+                    "ingredient": "1 pinch salt",
+                    "mark_as_deleted": false
+                },
+                {
+                    "ingredient": "guacamole, sour cream, chopped cilantro, flour or corn tortillas",
+                    "mark_as_deleted": false
+                }
             ],
             "directions":
             [
@@ -289,16 +606,46 @@
             "description": "a",
             "ingredients":
             [
-                "1 cup salted butter* softened",
-                "1 cup white (granulated) sugar",
-                "1 cup light brown sugar packed",
-                "2 tsp pure vanilla extract",
-                "2 large eggs",
-                "3 cups all-purpose flour",
-                "1 tsp baking soda",
-                "½ tsp baking powder",
-                "1 tsp sea salt***",
-                "2 cups chocolate chips (or chunks, or chopped chocolate)"
+                {
+                    "ingredient": "1 cup salted butter* softened",
+                    "mark_as_deleted": false
+                },
+                {
+                    "ingredient": "1 cup white (granulated) sugar",
+                    "mark_as_deleted": false
+                },
+                {
+                    "ingredient": "1 cup light brown sugar packed",
+                    "mark_as_deleted": false
+                },
+                {
+                    "ingredient": "2 tsp pure vanilla extract",
+                    "mark_as_deleted": false
+                },
+                {
+                    "ingredient": "2 large eggs",
+                    "mark_as_deleted": false
+                },
+                {
+                    "ingredient": "3 cups all-purpose flour",
+                    "mark_as_deleted": false
+                },
+                {
+                    "ingredient": "1 tsp baking soda",
+                    "mark_as_deleted": false
+                },
+                {
+                    "ingredient": "½ tsp baking powder",
+                    "mark_as_deleted": false
+                },
+                {
+                    "ingredient": "1 tsp sea salt***",
+                    "mark_as_deleted": false
+                },
+                {
+                    "ingredient": "2 cups chocolate chips (or chunks, or chopped chocolate)",
+                    "mark_as_deleted": false
+                }
             ],
             "directions":
             [
@@ -322,17 +669,50 @@
             "servings": 4,
             "ingredients": 
             [
-                "4 boneless skinless chicken breasts pounded to even thickness less than 1 inch",
-                "1 1/3 cup low sodium soy sauce divided",
-                "1/2 cup water",
-                "1/2 cup rice vinegar",
-                "1 cup sugar",
-                "1 teaspoon ground ginger",
-                "1/4 teaspoon crushed red pepper flakes",
-                "2 teaspoons minced garlic",
-                "3 tablespoons corn starch",
-                "1/2 teaspoon sesame seeds",
-                "chopped green onions and steamed rice, for serving"
+                {
+                    "ingredient": "4 boneless skinless chicken breasts pounded to even thickness less than 1 inch",
+                    "mark_as_deleted": false
+                },
+                {
+                    "ingredient": "1 1/3 cup low sodium soy sauce divided",
+                    "mark_as_deleted": false
+                },
+                {
+                    "ingredient": "1/2 cup water",
+                    "mark_as_deleted": false
+                },
+                {
+                    "ingredient": "1/2 cup rice vinegar",
+                    "mark_as_deleted": false
+                },
+                {
+                    "ingredient": "1 cup sugar",
+                    "mark_as_deleted": false
+                },
+                {
+                    "ingredient": "1 teaspoon ground ginger",
+                    "mark_as_deleted": false
+                },
+                {
+                    "ingredient": "1/4 teaspoon crushed red pepper flakes",
+                    "mark_as_deleted": false
+                },
+                {
+                    "ingredient": "2 teaspoons minced garlic",
+                    "mark_as_deleted": false
+                },
+                {
+                    "ingredient":  "3 tablespoons corn starch",
+                    "mark_as_deleted": false
+                },
+                {
+                    "ingredient":  "1/2 teaspoon sesame seeds",
+                    "mark_as_deleted": false
+                },
+                {
+                    "ingredient":  "chopped green onions and steamed rice, for serving",
+                    "mark_as_deleted": false
+                }
             ],
             "directions":
             [
@@ -351,12 +731,30 @@
             "description": "a",
             "ingredients":
             [
-                "1-2 pounds chicken tenders or 2 large boneless skinless chicken breasts sliced into 1-inch thick strips",
-                "1 1/2 cups all purpose flour",
-                "3/4 teaspoon salt",
-                "1/2 teaspoon black pepper",
-                "1 egg beaten with 2 tablespoons water",
-                "vegetable oil for frying"
+                {
+                    "ingredient":  "1-2 pounds chicken tenders or 2 large boneless skinless chicken breasts sliced into 1-inch thick strips",
+                    "mark_as_deleted": false
+                },
+                {
+                    "ingredient":  "1 1/2 cups all purpose flour",
+                    "mark_as_deleted": false
+                },
+                {
+                    "ingredient":  "3/4 teaspoon salt",
+                    "mark_as_deleted": false
+                },
+                {
+                    "ingredient":  "1/2 teaspoon black pepper",
+                    "mark_as_deleted": false
+                },
+                {
+                    "ingredient":  "1 egg beaten with 2 tablespoons water",
+                    "mark_as_deleted": false
+                },
+                {
+                    "ingredient":  "vegetable oil for frying",
+                    "mark_as_deleted": false
+                }
             ],
             "directions":
             [

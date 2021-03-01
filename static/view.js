@@ -107,49 +107,52 @@ const display_ingredients = (ingredients) =>{
     const unorderedList = document.createElement("ul");
     unorderedList.classList.add("list-group", "text-dark", "container-fluid","justify-content-between")
 
-    for (let ingredient in ingredients){
-        //INGREDIENT SECTION
-        const listItem = document.createElement("li");
-        const textSectionCol = document.createElement("div");
-        const textSectionRow = document.createElement("div");
-        const inputSection = document.createElement("div");
-        const input = document.createElement("input");
-        const ingredietSection = document.createElement("div");
-        //DELETE SECTION 
-        const deleteCol = document.createElement("div");
-        const deleteRow = document.createElement("div");
-        const deleteSection = document.createElement("div");
-        const deleteButton = document.createElement("span");
+    for (let i in ingredients){
+        let ingredient = ingredients[i];
+        if (!(ingredient.mark_as_deleted)){
+            //INGREDIENT SECTION
+            const listItem = document.createElement("li");
+            const textSectionCol = document.createElement("div");
+            const textSectionRow = document.createElement("div");
+            const inputSection = document.createElement("div");
+            const input = document.createElement("input");
+            const ingredietSection = document.createElement("div");
+            //DELETE SECTION 
+            const deleteCol = document.createElement("div");
+            const deleteRow = document.createElement("div");
+            const deleteSection = document.createElement("div");
+            const deleteButton = document.createElement("span");
 
 
-        deleteButton.innerHTML = "X";
-        deleteButton.classList.add("cursor-pointer");
-        // deleteButton.classList.add("btn", "rounded-3", "btn-outline-light","px-2", "py-0","btn-dark")
-        deleteSection.append(deleteButton);
-        deleteSection.classList.add("col-10", "mx-auto");
-        deleteRow.append(deleteSection);
-        deleteRow.classList.add("row");
-        deleteCol.append(deleteRow);
-        deleteCol.classList.add("col-2");
+            deleteButton.innerHTML = "X";
+            deleteButton.classList.add("cursor-pointer");
+            // deleteButton.classList.add("btn", "rounded-3", "btn-outline-light","px-2", "py-0","btn-dark")
+            deleteSection.append(deleteButton);
+            deleteSection.classList.add("col-10", "mx-auto");
+            deleteRow.append(deleteSection);
+            deleteRow.classList.add("row");
+            deleteCol.append(deleteRow);
+            deleteCol.classList.add("col-2");
 
-        ingredietSection.innerHTML = ingredients[ingredient];
-        ingredietSection.classList.add("col-11");
-        input.type = "checkbox";
-        input.value = "";
-        input.classList.add("form-check-input", "me-1");
-        inputSection.append(input);
-        inputSection.classList.add("col-1");
-        textSectionRow.append(inputSection, ingredietSection);
-        textSectionRow.classList.add("row");
+            ingredietSection.innerHTML = ingredient.ingredient;
+            ingredietSection.classList.add("col-11");
+            input.type = "checkbox";
+            input.value = "";
+            input.classList.add("form-check-input", "me-1");
+            inputSection.append(input);
+            inputSection.classList.add("col-1");
+            textSectionRow.append(inputSection, ingredietSection);
+            textSectionRow.classList.add("row");
 
-        textSectionCol.append(textSectionRow);
-        textSectionCol.classList.add("col-10");
+            textSectionCol.append(textSectionRow);
+            textSectionCol.classList.add("col-10");
 
-        listItem.append(textSectionCol, deleteCol);
-        listItem.classList.add("row", "text-white","py-1")
+            listItem.append(textSectionCol, deleteCol);
+            listItem.classList.add("row", "text-white","py-1")
 
-        unorderedList.append(listItem);
+            unorderedList.append(listItem);
 
+        }
     }
     ingredientsContainer.append(unorderedList);
 

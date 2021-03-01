@@ -166,7 +166,11 @@ const checkUserInputs = () =>{
     }
     else{
       ingredientInput.classList.remove("is-invalid");
-      ingredients.push(ingredient);
+      let ingredientObject = {
+        "ingredient": ingredient,
+        "mark-as-deleted": false,
+      }
+      ingredients.push(ingredientObject);
     }
     
   }
