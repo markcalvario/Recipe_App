@@ -4,6 +4,8 @@ const addDirectionButton = document.getElementById("add-another-direction");
 const listOfDirections = document.getElementById("user-directions");
 const createRecipeForm = document.getElementById("create-recipe-form");
 const shareButton = document.getElementById("share-button");
+const successMessage = document.getElementById("success-message");
+const linkToNewRecipe = document.getElementById("link-to-new-recipe");
 let ingredientId = 2;
 let directionId = 2;
 
@@ -194,8 +196,8 @@ const checkUserInputs = () =>{
     "image": encodeURIComponent(`${imgUrl}`),
     "description": `${foodDescription}`,
     "servings": `${servingSize}`,
-    "ingredients": `${ingredients}`,
-    "directions": `${directions}`
+    "ingredients": ingredients,
+    "directions": directions,
   }
 
   if (!(hasSeenFirstError)){
@@ -214,6 +216,11 @@ const save_recipe = (new_recipe) =>{
       dataType: "json",
       contentType: 'application/json; charset=utf-8',
       success: function(result){
+        const recipesResult = result["recipes"]
+        const length = recipesResult.length;
+        const recipeID = recipesResult[length-1].id
+        linkToNewRecipe.href = `/view/${recipeID}`;
+        successMessage.classList.remove("d-none");
       },
       error: function(request, status, error){
           console.log('Error');

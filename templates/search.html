@@ -11,23 +11,19 @@
                 <h1 class="pt-4" style="font-size: 3rem; letter-spacing: 5px; word-spacing: 10px;">Search Homemade Recipes</h1>
             </div>
         </div>
-        <div id="user-search" class="row py-4 justify-content-center my-2">
+        <!-- <div id="user-search" class="row py-4 justify-content-center my-2">
           <div class="col-1">
-            h
           </div>
             <div class="col-4">
                 <div class="input-group">
                     <input id="search-input" type="text" class="form-control rounded-3" placeholder="Find a recipe..." required>
-                    <div id="clients-error" class="invalid-feedback text-white">
-                    </div>
+                    <div id="clients-error" class="invalid-feedback">You entered an empty search!</div>
                 </div>
             </div>
             <div class="col-2">
                 <button id="submit-btn" type="submit" class="btn rounded-3 btn-outline-light btn-dark">Search</button>
             </div>
-        </div>  
-
-
+        </div>   -->
         <div id ="recipes" class="container">
           <div id = "recipes-row" class="row py-3 ">
            
@@ -35,5 +31,9 @@
         </div>
 
     </div>   
-  
+    <script>
+        const recipesData = JSON.parse('{{ recipes|tojson }}')
+        console.log(recipesData);
+    </script>
+    <!-- <script src="{{url_for('static', filename = 'search.js')}}"></script> -->
 {% endblock %}

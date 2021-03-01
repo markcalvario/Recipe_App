@@ -43,6 +43,7 @@
             background-size: cover;
         }
     </style>
+    
 
 {% endblock %}
 
@@ -64,6 +65,10 @@
             </div>
           </div>
     </div>   
-    
+    <script>
+        const recipesData = JSON.parse('{{ recipes|tojson }}')
+        console.log(recipesData);
+    </script>
+   
   
 {% endblock %}
