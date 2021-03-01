@@ -71,21 +71,7 @@
               </div> 
         </div>
         <div class="container">
-            <div class="row py-4">
-                <div class="col-6">
-                    <img class="img-fluid view-img-resize" src="{{recipes['image']}}" alt = "{{recipes['food']}}"/>
-                </div>
-                <div class="col-6 text-white">
-                    <div class="d-flex">
-                        <h2 class="text-center ">Ingredients:</h2>
-                    </div>
-                    <ul class="list-group text-dark">
-                        {% for item in recipes['ingredients'] %}
-                            <li class="list-group-item"><input class="form-check-input me-1" type="checkbox" value="" aria-label="...">{{item}}</li>
-                        {% endfor %}
-                    </ul>
-                </div>
-            </div>
+            <div id="ingredients-and-directions" class="row py-5"></div>
         </div>
     </div>
     
