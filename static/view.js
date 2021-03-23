@@ -8,6 +8,7 @@ const servings = document.getElementById("servings");
 const authorSection = document.getElementById("author");
 
 const recipe = current_recipe;
+authorSection.innerHTML = `By ${recipe.author}`;
 recipeTitle.innerHTML = `${recipe.food}`
 recipeDescription.innerHTML = `${recipe.description}`
 servings.innerHTML = recipe.servings
@@ -32,20 +33,28 @@ const display_edit_form = () =>{
     inputSection.classList.add("w-100", "mx-2", "py-2")
     inputSection.append(input, span);
 
+    authorSection.style.top = "48%";
+    recipeDescription.style.top= "58%";
+
     // Section 2
     button2.type = "submit";
     button2.classList.add("btn", "rounded-3", "btn-outline-light", "btn-dark", "mx-1");
     button2.innerHTML = "Submit";
+    let error = false
     button2.addEventListener("click", (e)=>{
         e.preventDefault();
         const value = input.value.trim();
         if (value.length==0){
             input.classList.add("is-invalid");
             input.focus();
+            error = true;
+            authorSection.style.top = "53%";
+            recipeDescription.style.top= "63%";
         }
         else{
             console.log("submit");
             submit_edit(value);
+            error = false;
         }
     })
     
@@ -64,9 +73,7 @@ const display_edit_form = () =>{
     form.append(inputSection, buttonSection);
     form.classList.add("w-50");
     form.id = "edit-form";
-
-    authorSection.style.top = "48%";
-    recipeDescription.style.top= "58%";
+   
     recipeBanner.append(form);
     bannerTitle.classList.add("d-none")
     input.focus();
@@ -106,6 +113,7 @@ const display_ingredients = (ingredients) =>{
     ingredientsTitleSection.classList.add("d-flex");
 
     ingredientsTitleSection.append(ingredientsTitle);
+    ingredientsTitleSection.id = "ingredients-title-section";
 
     //Section 2
     const ingredientsContainer = document.createElement("div");
@@ -137,7 +145,7 @@ const display_ingredients = (ingredients) =>{
                     "id": recipe.id,
                     "ingredient": ingredient.ingredient
                 }
-                delete_ingredient(ingredient_to_delete);
+                delete_ingredient(ingredient_to_delete, i);
             })
             // deleteButton.classList.add("btn", "rounded-3", "btn-outline-light","px-2", "py-0","btn-dark")
             deleteSection.append(deleteButton);
@@ -149,11 +157,11 @@ const display_ingredients = (ingredients) =>{
 
             ingredietSection.innerHTML = ingredient.ingredient;
             ingredietSection.classList.add("col-11");
-            input.type = "checkbox";
-            input.value = "";
-            input.classList.add("form-check-input", "me-1");
-            inputSection.append(input);
-            inputSection.classList.add("col-1");
+            //input.type = "checkbox";
+            //input.value = "";
+            //input.classList.add("form-check-input", "me-1");
+            //inputSection.append(input);
+            //inputSection.classList.add("col-1");
             textSectionRow.append(inputSection, ingredietSection);
             textSectionRow.classList.add("row");
 
@@ -162,6 +170,7 @@ const display_ingredients = (ingredients) =>{
 
             listItem.append(textSectionCol, deleteCol);
             listItem.classList.add("row", "text-white","py-1")
+            listItem.id = `ingredient-${i}`
 
             unorderedList.append(listItem);
 
@@ -213,7 +222,7 @@ const display_ingredients_and_directions = ()=>{
     
 }
 
-const delete_ingredient = (ingredient)=>{
+const delete_ingredient = (ingredient, id)=>{
     $.ajax({
         type: 'POST',
         url: `/delete_ingredient`,
@@ -221,7 +230,28 @@ const delete_ingredient = (ingredient)=>{
         dataType: "json",
         contentType: 'application/json; charset=utf-8',
         success: function(result){
-            window.location.href = `/view/${recipe.id}`;
+            const undo = document.getElementById("undo-delete");
+            const itemToDelete = document.getElementById(`ingredient-${id}`);
+            itemToDelete.classList.add("d-none");
+            if (undo){
+                undo.remove();
+            }
+            const title = document.getElementById("ingredients-title-section");
+            const div = document.createElement("div");
+            const button = document.createElement("button");
+            button.classList="btn btn-primary";
+            button.innerText = "Undo Deletion";
+            button.addEventListener("click", ()=>{
+                undo_delete_ingredient(ingredient, id)
+            });
+            
+            //button.id = "undo-delete";
+            div.append(button);
+            div.id = "undo-delete";
+            itemToDelete.before(div);
+            div.classList.add("mx-auto");
+            //itemToDelete.before(button);
+            //title.append(div);
         },
         error: function(request, status, error){
             console.log('Error');
@@ -231,7 +261,7 @@ const delete_ingredient = (ingredient)=>{
         }
     }) 
 }
-const undo_delete_ingredient = (ingredient)=>{
+const undo_delete_ingredient = (ingredient, id)=>{
     $.ajax({
         type: 'POST',
         url: `/undo_delete_ingredient`,
@@ -239,7 +269,10 @@ const undo_delete_ingredient = (ingredient)=>{
         dataType: "json",
         contentType: 'application/json; charset=utf-8',
         success: function(result){
-            window.location.href = `/view/${recipe.id}`;
+            const undo = document.getElementById("undo-delete");
+            const itemToDelete = document.getElementById(`ingredient-${id}`);
+            undo.classList.add("d-none");
+            itemToDelete.classList.remove("d-none");
         },
         error: function(request, status, error){
             console.log('Error');

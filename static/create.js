@@ -102,8 +102,12 @@ const checkUserInputs = () =>{
   const servingSize = document.getElementById("serving-size").value.trim();
   const imgUrl = document.getElementById("img-url").value.trim();
   const foodDescription = document.getElementById("food-description").value.trim();
+
   const ingredientsList = listOfIngredients.querySelectorAll(".form-control")
   const directionsList = listOfDirections.querySelectorAll(".form-control");
+
+  console.log(ingredientsList)
+  console.log(directionsList)
 
   let hasSeenFirstError = false;
 
@@ -206,8 +210,10 @@ const checkUserInputs = () =>{
 
   if (!(hasSeenFirstError)){
     save_recipe(recipeDataToSend);
+    createRecipeForm.reset();
+    fullNameInput.focus();
   }
-  createRecipeForm.reset();
+  
 }
 
 

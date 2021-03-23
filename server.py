@@ -8,6 +8,7 @@ filename = os.path.join(cwd, "./static/","data.json")
 recipeId = 10
 latest = 5
 results = []
+searchString = ""
 with open(filename) as f:
     data = json.load(f)
     recipes = data["recipes"]
@@ -28,16 +29,18 @@ def home():
 # write a home method
 def search():
     global results
-    return render_template('search.html', recipes = results)
+    global searchString
+    return render_template('search.html', recipes = results, searchString = searchString)
 
 @app.route('/get_search', methods=['GET', 'POST'])
 def get_search():
     global recipes
     global results
+    global searchString
     search_results = []
     substring = request.get_json()
     substring = substring.lower()
-
+    searchString = substring
     for recipe in recipes:
         food = recipe["food"].lower()
         description = recipe["description"].lower()
@@ -47,7 +50,7 @@ def get_search():
     
     results = search_results
     search_results = jsonify(recipes = search_results)
-    print("data sent")
+    #print("data sent")
     
     return search_results
 
@@ -74,7 +77,7 @@ def create_recipe():
 
     recipes.append(new_recipe)
     recent_recipes = recipes[latest:]
-    print(new_recipe)
+    #print(new_recipe)
     return jsonify(recipes = recipes)
 
 
@@ -112,7 +115,7 @@ def delete_ingredient():
     for i in all_ingredients:
         if (i["ingredient"]==ingredient):
             i["mark_as_deleted"] = True
-    print(recipe)
+    #print(recipe)
     
     return jsonify(recipe)
 

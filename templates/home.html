@@ -20,6 +20,7 @@
         .banner p {
             position: absolute;
             top: 50%;
+            font-size: 1.1rem;
             color: white;
             left: 2%;
             width: 50%;
@@ -53,7 +54,9 @@
         <div class="row">
             <div class="banner">
                 <h4>Looking for recipes to make?</h4>
-                <p> This is the description for the This is the description for the This is the description for the This is the description for the This is the description for the This is the description for the This is the </p>
+                <p>
+                    Whether you are out of ideas or just want to try out new recipes, this website is just for you!
+                </p>
               </div> 
         </div>
         <div id ="recipes" class="container">
@@ -67,6 +70,7 @@
     </div>   
     <script>
         const recipesData = JSON.parse('{{ recipes|tojson }}')
+        const recipeSearch = null;
         console.log(recipesData);
     </script>
    
